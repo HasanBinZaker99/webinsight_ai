@@ -20,7 +20,7 @@ export async function fetchWebsiteData(url) {
   g means: “global” This tells JavaScript: Do this for the whole
    string, not just the first match. Without g, only the first extra space group would be replaced. With g, all extra spaces everywhere are cleaned.”
   */
-  const shortText = text;
+  const shortText = text.split(" ").slice(0, 15000).join(" ");
 
   return {
     text: shortText,
